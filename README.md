@@ -17,15 +17,19 @@ The primary function used is: `download_pums_files`.
 
 ### Example
 
-Download a single file.
+Download the 2019 North Carolina population PUMS data set. Save files to `pums_pop`.
 
 ```r
 # download 2019 North Carolina population PUMS dataset
 
-download_pums_files('nc', 2019, 'population', 'population_nc_2019.zip', 'pums_pop')
+download_pums_files(state = 'nc', 
+                    year = 2019, 
+                    level = 'population', 
+                    destination_file_path = 'population_nc_2019.zip', 
+                    download_folder = 'pums_pop')
 ```
 
-Download multiple years iteratively.
+Download multiple years iteratively. The following code downloads all North Carolina population PUMS files from 2010 to 2019.
 
 ```r
 # vector of needed years
