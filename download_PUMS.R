@@ -4,7 +4,7 @@
 # downloading PUMS data.
 #
 # This script downloads all housing and population PUMS files
-# from North Carolina between 2010 and 2019.
+# from North Carolina between 2008 and 2019.
 #
 #######################################################################
 
@@ -17,7 +17,7 @@ source('functions.R')
 # Parameters to change ----------------------------
 
 # specify all years that you want to download PUMS data for
-years <- seq(2010, 2019, 1)
+years <- seq(2008, 2019, 1)
 
 # two letter state abbreviation
 state_abb <- 'nc'
