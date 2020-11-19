@@ -1,7 +1,6 @@
 # Downloading US Census PUMS files
 
 The Public Use Microdata Sample (PUMS) files are individual-level responses from the US Census American Community Survey (ACS). This repo allows users to programatically download the population and household files by state. The final output is a gunzip (gz) file for a level (population or housing), year, and state combination. The unzipped data is a csv file.
-destination_file_path, download_folder
 
 The primary function used is: `download_pums_files`.
 
