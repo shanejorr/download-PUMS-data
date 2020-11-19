@@ -50,3 +50,4 @@ read_csv('pums_pop/population_nc_2010.csv.gz)
 ```
 An additional example of usage is found in `download_PUMS.R.`
 
+*NOTE:* The function only downloads 1-year files. In the future, it will be modified to also download 5-year files.
