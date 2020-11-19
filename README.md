@@ -7,13 +7,13 @@ The primary function used is: `download_pums_files`.
 ### Function parameters
 
 - state: two letter abbreviation of state, can be lower or upper case (string)
-- year = the year to extract PUMS data for (integer)
-- level = whether to download popualtion or housing PUMS data (string)
+- year: the year to extract PUMS data for (integer)
+- level: whether to download popualtion or housing PUMS data (string)
   - Options:
-    - 'population' = population data
-    - 'housing' = housing data
-- destination_file_path = the file name to give the initial downloaded .zip file. Must end in '.zip'. This name will also be the file name of the gz file, but it will end in '.csv.gz' instead of .zip. (string)
-- download_folder = An empty folder to download the .zip files into. The folder will be created if it does not exist.
+    - 'population': population data
+    - 'housing': housing data
+- destination_file_path: the file name to give the initial downloaded .zip file. Must end in '.zip'. This name will also be the file name of the gz file, but it will end in '.csv.gz' instead of .zip. (string)
+- download_folder: An empty folder to download the .zip files into. The folder will be created if it does not exist.
 
 ### Example
 
