@@ -46,7 +46,7 @@ download_delete <- function(http_address, destination_file_path, download_folder
   
   # we want to delete the zip file and PDF documentation
   # first get the file name of the documentation PDF
-  delete_files <- list.files(download_folder, pattern = "^ACS.*[.]pdf", full.names = TRUE)
+  delete_files <- list.files(download_folder, pattern = "ACS.*[.]pdf", full.names = TRUE)
   
   # delete documentation PDF and zip file
   file.remove(delete_files, destination_file_path)
