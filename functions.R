@@ -58,10 +58,18 @@ gzip_pums <- function(download_folder, destination_file_path) {
   # get file name
   zip_file <- list.files(download_folder, pattern = "[.]csv$", full.names = TRUE)
   
-  # create output name for gz file
-  gz_output <- str_replace(destination_file_path, ".zip", ".csv.gz")
+  # some states and the US files have more than one csv file in the zip file
+  # get the number of csv files in the zip file
+  num_files <- length(zip_file)
   
-  gzip(zip_file, gz_output, remove = T)
+  # create vector of letters to name multiple files
+  num_files_seq <- letters[seq_len(num_files)]
+  
+  # create output name for gz file
+  gz_output <- str_remove(destination_file_path, ".zip") # , ".csv.gz"
+  gz_output <- str_c(download_folder, "/", gz_output, "-", num_files_seq, ".csv.gz")
+  # iterate through each file and unzip
+  walk2(zip_file, gz_output, gzip, remove = T)
 }
 
 # function to download file and unzip if needed state, year, level

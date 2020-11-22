@@ -24,8 +24,8 @@ state_abb <- 'nc'
 
 # directory to download zip files to
 # NOTE: directory will be created if it does not already exist
-download_folder_pop <- "pums_pop"
-download_folder_house <- "pums_house"
+download_folder_pop <- "pums_pop_nc"
+download_folder_house <- "pums_house_nc"
 
 # End parameters to change ----------------------------
 
@@ -35,8 +35,8 @@ pop_files <- glue("pop-{state_abb}-{years}.zip")
 
 # download housing data
 map2(years, housing_files, download_pums_files, 
-     state = 'nc', level = 'housing', download_folder = 'pums_housing')
+     state = state_abb, level = 'housing', download_folder = download_folder_house)
 
 # download population data
 map2(years, pop_files, download_pums_files, 
-     state = 'nc', level = 'population', download_folder = 'pums_pop')
+     state = state_abb, level = 'population', download_folder = download_folder_pop)
